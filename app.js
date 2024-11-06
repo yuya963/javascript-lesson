@@ -6,7 +6,8 @@ let greet = '私のニックネームは' + nickname + 'です。' + '年齢は'
 
 //Q2 配列
 let languages = ['Javascript', 'PHP', 'Ruby', 'Python', 'Go'];
-console.log('私の好きな言語は', languages[0], 'です。' + '次は', languages[3], 'を勉強してみたいです。');
+let lenguagesText = `私の好きな言語は${languages[0]}です。次は${languages[3]}を勉強してみたいです。`;
+console.log(lenguagesText);
 
 //Q3 オブジェクト
 /*let user = {
@@ -76,37 +77,29 @@ let user = {
 user.sayHello();
 
 //Q8 引数
-/*let calc = {
-  add: function(x,y) {
-    console.log(x + y);
-  }
-};
-
-calc.add(3,4);*/
-
-/*let calc = {
-  subtract: function(x,y) {
-    console.log(x - y);
-  }
-};
-
-calc.subtract(11,1);*/
-
-/*let calc = {
-  multiply: function(x,y) {
-    console.log(x * y);
-  }
-};
-
-calc.multiply(7,7);*/
-
 let calc = {
-  divide: function(x,y) {
-    console.log(x / y);
+  add: function(x, y) {
+    return x + y;
+  },
+  subtract: function(x, y) {
+    return x - y;
+  },
+  multiply: function(x, y) {
+    return x * y;
+  },
+  divide: function(x, y) {
+    return x / y ;
   }
 };
 
-calc.divide(25,5);
+function operate(operation, x, y) {
+  return operation(x, y);
+}
+
+console.log(operate(calc.add, 5, 2)); 
+console.log(operate(calc.subtract, 11, 1)); 
+console.log(operate(calc.multiply, 7, 7)); 
+console.log(operate(calc.divide, 25, 5)); 
 
 //Q9 返り値
 function remainder(x,y) {
@@ -124,7 +117,7 @@ console.log(x);*/
 
 //応用編
 //Q1 標準組み込みオブジェクト
-let random = Math.random()*10;
+let random = Math.floor(Math.random()*10);
 console.log(random);
 
 //Q2 コールバック関数
