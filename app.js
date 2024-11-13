@@ -10,14 +10,18 @@ let lenguagesText = `私の好きな言語は${languages[0]}です。次は${lan
 console.log(lenguagesText);
 
 //Q3 オブジェクト
-/*let user = {
+let user = {
   name: 'John',
   age: 26,
   bloodType: 'A',
   favorite: 'card',
+  birthday: '2000-09-27',
+  sayHello() {
+    console.log('Hello!');
+  }
 };
 
-console.log(user.age);*/
+console.log(user.age);
 
 //Q4 配列 × オブジェクト
 let playerList = [
@@ -63,17 +67,6 @@ const sayWorld = function() {
 sayWorld();
 
 //Q7 メソッド
-let user = {
-  name: 'John',
-  age: 26,
-  bloodType: 'A',
-  favorite: 'card',
-  birthday: '2000-09-27',
-  sayHello: function() {
-    console.log('Hello!');
-  }
-};
-
 user.sayHello();
 
 //Q8 引数
@@ -138,9 +131,11 @@ if (num > 0) {
 
 //Q4 for
 const numbers = [];
-for (number = 0; number < 100; number += 1){
+for (number = 0; number < 100; number++){
   numbers.push(number);
 }
+
+console.log(numbers);
 
 //Q5 for×if
 let mixed = [4, '2', 5, '8', '9', 0, 1];
@@ -157,7 +152,3 @@ for (let i = 0; i < mixed.length; i++) {
     console.log('not number');
     }
   }
-
-
-
-
